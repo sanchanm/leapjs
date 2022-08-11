@@ -1,0 +1,34 @@
+{
+  "name": "@leapjs/scheduler",
+  "version": "0.5.38",
+  "author": "Sanchan Moses",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WekanCompany/leapjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Leap - lightweight, flexible, modern node.js framework (@scheduler)",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "shx rm -rf build",
+    "start:dev": "cross-env NODE_ENV=development node dist/src/index.js --color",
+    "watch": "tsc-watch --onSuccess \"npm run start:dev\"",
+    "test": "cross-env NODE_ENV=test TS_NODE_FILES=true nyc mocha"
+  },
+  "dependencies": {
+    "@leapjs/common": "^0.5.38",
+    "@typegoose/typegoose": "7.6.0",
+    "cron": "1.7.2",
+    "cron-parser": "2.13.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.10",
+    "reflect-metadata": "0.1.13"
+  },
+  "devDependencies": {
+    "@types/cron": "1.7.1"
+  }
+}

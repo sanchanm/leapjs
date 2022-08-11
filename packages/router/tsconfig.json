@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src", "test"],
+  "compilerOptions": {
+    /* Basic Options */
+    "outDir": "./dist" /* Redirect output structure to the directory. */,
+    "rootDir": "./" /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */,
+    "declaration": true,
+    "lib": ["ES6"],
+
+    /* Module Resolution Options */
+    "types": ["mocha"]
+  }
+}
